@@ -92,3 +92,4 @@ const LastFmAlbum = ({ band, album }) => {
 };
 
 export default LastFmAlbum;
+
