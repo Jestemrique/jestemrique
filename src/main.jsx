@@ -21,6 +21,7 @@ import InternalLink from './components/InternalLink.jsx';
 
 // Non SB components
 import LastFmAlbum from './components/LastFmAlbum.jsx';
+import LastFmBand from './components/LastFmBand.jsx';
 
 
 storyblokInit({
