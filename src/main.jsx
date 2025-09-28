@@ -19,6 +19,9 @@ import Album from './components/Album.jsx';
 import ListBands from './components/ListBands.jsx';
 import InternalLink from './components/InternalLink.jsx';
 
+// Non SB components
+import LastFmAlbum from './components/LastFmAlbum.jsx';
+
 
 storyblokInit({
   accessToken: import.meta.env.VITE_STORYBLOK_PREVIEW_API_TOKEN,
