@@ -6,6 +6,52 @@
   border: 1px dotted grey;
 } 
 
+/*** Fuentes ***/
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.source-sans-3{
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ====fin fuentes ==== */
+
+
+/* colores */
+.body-background{
+  background-color: RGB(55, 66, 88);
+}
+
+.text-color{
+  color: RGB(235, 235, 235);
+}
+
+
+html, body {
+  background-color: RGB(55, 66, 88); /* o el color que quieras */
+}
+/* fin colores */
+
+
+
 /* ===== Comportamiento por defecto (mobile <769px) ===== */
 .navbar-column {
   margin-top: 0; /* sin margen extra */

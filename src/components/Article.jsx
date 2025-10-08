@@ -7,9 +7,9 @@ const Article = ({blok}) => {
 
     return (
         <>
-        <h1>{blok.title}</h1>
-        <h2>{blok.excerpt}</h2>
-        <div dangerouslySetInnerHTML={{ __html: render(blok.body) }} />
+        <h1 className="source-sans-3 text-color">{blok.title}</h1>
+        <h2 className="source-sans-3 text-color">{blok.excerpt}</h2>
+        <div dangerouslySetInnerHTML={{ __html: render(blok.body) }} className="source-sans-3"/>
         </>
         
     )
