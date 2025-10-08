@@ -1,14 +1,14 @@
 import { useStoryblok } from "@storyblok/react";
 import { useParams } from "react-router-dom";
 import LastFmAlbum from "./LastFmAlbum";
+import getVersion from "../utils/getVersion";
 
 const Album = ({ blok }) => {
     const { '*': slug } = useParams();
     const story = useStoryblok(slug, {
-        version: 'draft',
+        version: getVersion(),
         resolve_relations: ['album.band']
     });
-
     if (!story?.content) {
         return <div>Loading album...</div>;
     }

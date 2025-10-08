@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
 import { Link } from "react-router-dom";
+import getVersion from "../utils/getVersion";
 
 const ListAlbums = () => {
   const [albums, setAlbums] = useState([]);
@@ -11,7 +12,7 @@ const ListAlbums = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: "albums/",
-          version: "draft",
+          version: getVersion(),
         });
         setAlbums(res.data.stories || []);
       } catch (err) {
