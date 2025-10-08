@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
 import { Link } from "react-router-dom";
+import getVersion from "../utils/getVersion";
 
 const ListArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -11,7 +12,7 @@ const ListArticles = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: "articles/",
-          version: "draft",
+          version: getVersion(),
         });
         setArticles(res.data.stories || []);
       } catch (err) {
