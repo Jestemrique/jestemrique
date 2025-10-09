@@ -26,7 +26,7 @@ const ListArticles = () => {
   return (
     <ul>
       {articles.map((article) => (
-        <li key={article.uuid /* o article.id si lo tienes */}>
+        <li key={article.uuid}>
           <Link to={`/${article.full_slug}`}>
             {article.content?.title || article.name || "Artículo sin título"}
           </Link>

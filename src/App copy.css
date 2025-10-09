@@ -80,24 +80,6 @@ html, body {
   }
 }
 
-
-/**********************************/
-/*** Spacing and border classes ***/
-/**********************************/
-
-/* ==== Border left solo en tablet y superior ==== */
-.has-left-border-tablet {
-  border: none; /* por defecto (móvil) sin borde */
-}
-
-.mt-tablet-6 {
-  margin-top: 0; /* valor por defecto en móvil */
-}
-
-
-
-
-
 /* ===== Tablet y superior (>=769px) ===== */
 @media screen and (min-width: 769px) {
   /* Sidebar sticky en la columna izquierda */
@@ -118,16 +100,6 @@ html, body {
   /* No hace falta padding-top en tablet+, el burger desaparece */
   aside {
     padding-top: 0;
-  }
-
-  .has-left-border-tablet {
-    border-left: 1px solid #cccccc;
-    
-    box-sizing: border-box;
-  }
-
-  .mt-tablet-6 {
-    margin-top: 6rem;
   }
 }
 
@@ -164,6 +136,4 @@ html, body {
     "YTUC" 712;
 }
 /* ====fin fuentes ==== */
-
-
 

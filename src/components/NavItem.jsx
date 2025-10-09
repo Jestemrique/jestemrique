@@ -15,7 +15,7 @@ const NavItem = ({ blok }) => {
   return (
     <li {...storyblokEditable(blok)} className="has-text-right-tablet">
       <Link to={url === "/" ? "/" : `/${url}`} onClick={handleClick} >
-        <div className=" has-text-right-tablet  text-color">
+        <div className=" has-text-right-tablet oswald-font is-size-4-tablet "> 
           {blok.label || "No label"}
           </div>
       </Link>

@@ -7,9 +7,10 @@ const Article = ({blok}) => {
 
     return (
         <>
-        <h1 className="source-sans-3 text-color">{blok.title}</h1>
-        <h2 className="source-sans-3 text-color">{blok.excerpt}</h2>
-        <div dangerouslySetInnerHTML={{ __html: render(blok.body) }} className="source-sans-3"/>
+        <h1 className="oswald-font is-size-4-mobile is-size-3-tablet">{blok.title}</h1>
+        <hr className="mt-0"/>
+        <h2 className="roboto-flex-font is-size-5-mobile is-size-4-tablet">{blok.excerpt}</h2>
+        <div dangerouslySetInnerHTML={{ __html: render(blok.body) }} className="robot-flex-font has-text-grey-dark"/>
         </>
         
     )
