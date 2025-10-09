@@ -29,7 +29,13 @@ const ListArticles = () => {
         <li key={article.uuid}>
           <Link to={`/${article.full_slug}`}>
             {article.content?.title || article.name || "Artículo sin título"}
+            <div className="roboto-flex-font has-text-grey is-hidden-mobile">
+            {article.content?.excerpt && (
+              <p>{article.content.excerpt}</p>
+            )}
+            </div>
           </Link>
+          <hr />
         </li>
       ))}
     </ul>
