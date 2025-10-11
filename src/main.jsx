@@ -18,6 +18,8 @@ import Band from './components/Band.jsx';
 import Album from './components/Album.jsx';
 import ListBands from './components/ListBands.jsx';
 import InternalLink from './components/InternalLink.jsx';
+import Catalog from './components/Catalog.jsx';
+import CatalogLink from './components/CatalogLink.jsx';
 
 // Non SB components
 import LastFmAlbum from './components/LastFmAlbum.jsx';
@@ -41,6 +43,8 @@ storyblokInit({
     album: Album,
     list_bands: ListBands,
     internal_link: InternalLink,
+    catalog: Catalog,
+    catalog_link: CatalogLink,
   },
   apiOptions: {
     region: 'eu',
