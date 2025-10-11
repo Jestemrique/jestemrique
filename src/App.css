@@ -9,22 +9,51 @@
 
 
 
-/* colores */
-/* 
-.body-background{
-  background-color: RGB(55, 66, 88);
-}
-
-.text-color{
-  color: RGB(235, 235, 235);
-}
-
+/**********************/
+/*** Colors ***/
+/**********************/
 
 html, body {
-  background-color: RGB(55, 66, 88); 
+  color: hsl(0, 0%, 29%);
+}
+
+/* End colores */
+
+
+
+/**********************/
+/*** Colors ***/
+/**********************/
+
+.epr-link {
+  color: #333;
+  border-bottom: 1px dotted #aaa;
+  padding-bottom: 2px;
+}
+
+.epr-link:hover {
+  color: #000;
+}
+
+/* Icono de abrir en nueva pestaña */
+/* .epr-link::after {
+  content: "↗";
+  font-size: 0.7em;
+  margin-left: 4px;
+  color: #999;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 } */
 
-/* fin colores */
+/* Efecto al pasar el mouse */
+/* .epr-link:hover::after {
+  opacity: 1;
+  transform: translateY(-1px);
+} */
+
+/**** fin Links ****/
+
+
 
 
 
@@ -45,28 +74,29 @@ html, body {
 
 /* ENLACES MENU LIST */
 .navbar-column .menu-list a {
-  background-color: transparent;  /* fondo transparente */
-  text-decoration: none;           /* quitar subrayado por defecto */
-  color: #000;                     /* color normal del enlace */
-  transition: color 0.2s ease;    /* transición suave */
+  background-color: transparent;  
+  text-decoration: none;          
+  transition: color 0.2s ease;    
 }
 
 .navbar-column .menu-list a:hover {
-  color: #3273dc; /* color al hacer hover, por ejemplo azul Bulma */
+  text-decoration: underline;
 }
-/* FIN ENLACES MENU LIST */
 
 /* Burger fijo en mobile */
 @media screen and (max-width: 768px) {
   .burger-fixed {
     position: fixed;
-    top: 0;
+    /* top: 0; */
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background-color: white;
     padding: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.08); */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
+
   }
 
   /* Evitar que el contenido principal se quede debajo del burger */
@@ -102,12 +132,13 @@ html, body {
 @media screen and (min-width: 769px) {
   /* Sidebar sticky en la columna izquierda */
   .navbar-column {
-    margin-top: 20vh; /* opcional, si quieres mantener margen visual inicial */
+    
+    margin-top: 10vh; /* opcional, si quieres mantener margen visual inicial */
     position: sticky;
     top: 1rem;                    /* distancia desde el top de la ventana */
     max-height: calc(100vh - 1rem); /* no sobrepase la pantalla */
     overflow-y: auto;             /* permite scroll interno si hay muchos items */
-    -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS */
+    
   }
 
   /* main-column: mt-6 */
@@ -129,6 +160,7 @@ html, body {
   .mt-tablet-6 {
     margin-top: 6rem;
   }
+
 }
 
 /* Fin Navigation bar */

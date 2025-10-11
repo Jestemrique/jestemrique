@@ -27,7 +27,7 @@ const ListAlbums = () => {
     <ul>
       {albums.map((album) => (
         <li key={album.uuid }>
-          <Link to={`/${album.full_slug}`}>
+          <Link to={`/${album.full_slug}`}  className="epr-link is-size-5">
             {album.content?.title || album.name || "Album sin título"}
           </Link>
         </li>

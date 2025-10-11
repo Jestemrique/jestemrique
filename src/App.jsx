@@ -23,7 +23,7 @@ function App() {
     <>
     <div className="container mt-tablet-6">
       <div className="columns">
-        <div className="column is-one-fifth-tablet navbar-column">
+        <div className="column is-one-fifth-tablet navbar-column ">
           <NavBar blok={navStory.content} />
         </div>
         <div className="column main-column px-5 has-left-border-tablet">
