@@ -26,10 +26,17 @@ const ListArticles = () => {
   return (
     <ul>
       {articles.map((article) => (
-        <li key={article.uuid /* o article.id si lo tienes */}>
-          <Link to={`/${article.full_slug}`}>
+        <li key={article.uuid}>
+          <Link to={`/${article.full_slug}`} className="epr-link is-size-5">
             {article.content?.title || article.name || "Artículo sin título"}
+            
           </Link>
+          <div className="is-size-5 mb-3 is-hidden-mobile">
+            {article.content?.excerpt && (
+              <p>{article.content.excerpt}</p>
+            )}
+            </div>
+          
         </li>
       ))}
     </ul>

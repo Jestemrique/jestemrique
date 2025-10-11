@@ -47,16 +47,19 @@ const LastFmBand = ({ band }) => {
     const hasImage = lastImage && lastImage !== "";
 
     return (
-        <div>
-            <h3>Last.fm info:</h3>
-            <div>
-                <strong>Descripción:</strong>{" "}
+        <div className="content">
+            <dl>
+                <dt className="oswald-font is-size-5-mobile is-size-4-tablet " >Last.fm info:</dt>
+            <dd>
+                
                 {bio ? (
                     <span dangerouslySetInnerHTML={{ __html: bio }} />
                 ) : (
                     <span style={{ color: "gray" }}>No hay información disponible en Last.fm</span>
                 )}
-            </div>
+            </dd>
+            </dl>
+
         </div>
     );
 };
