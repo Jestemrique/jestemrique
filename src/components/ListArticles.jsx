@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
 import { Link } from "react-router-dom";
+import getVersion from "../utils/getVersion";
 
 const ListArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -11,7 +12,7 @@ const ListArticles = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: "articles/",
-          version: "draft",
+          version: getVersion(),
         });
         setArticles(res.data.stories || []);
       } catch (err) {
@@ -23,16 +24,25 @@ const ListArticles = () => {
   }, [storyblokApi]);
 
   return (
-    <ul>
-      {articles.map((article) => (
-        <li key={article.uuid /* o article.id si lo tienes */}>
-          <Link to={`/${article.full_slug}`}>
-            {article.content?.title || article.name || "Artículo sin título"}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div className="content">
+      <dl>
+        {articles.map((article) => (
+          <>
+            <dt key={article.uuid}>
+              <Link to={`/${article.full_slug}`} className="epr-link is-size-5">
+                {article.content?.title || article.name || "Artículo sin título"}
+              </Link>
+            </dt>
+
+            <dd className="is-size-5 mb-3 is-hidden-mobile">
+              {article.content?.excerpt && <p>{article.content.excerpt}</p>}
+            </dd>
+          </>
+        ))}
+      </dl>
+    </div>
   );
 };
 
 export default ListArticles;
+

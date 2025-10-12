@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
 import { Link } from "react-router-dom";
+import getVersion from "../utils/getVersion";
 
 const ListBands = () => {
   const [bands, setBands] = useState([]);
@@ -11,7 +12,7 @@ const ListBands = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: "bands/",
-          version: "draft",
+          version: getVersion(),
         });
         setBands(res.data.stories || []);
       } catch (err) {
@@ -25,8 +26,8 @@ const ListBands = () => {
   return (
     <ul>
       {bands.map((band) => (
-        <li key={band.uuid /* o band.id si lo tienes */}>
-          <Link to={`/${band.full_slug}`}>
+        <li key={band.uuid }>
+          <Link to={`/${band.full_slug}`} state={{ uuid: band.uuid }} className="epr-link is-size-5">
             {band.content?.title || band.name || "Banda sin título"}
           </Link>
         </li>

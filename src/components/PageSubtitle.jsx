@@ -1,8 +1,12 @@
-import { StoryblokComponent } from "@storyblok/react";  
+import { StoryblokComponent, richTextResolver, storyblokEditable } from "@storyblok/react";  
 
 const PageSubtitle = ({blok}) => {
+
+    const {render} = richTextResolver();
+
     return (
-        <h1>{blok.page_subtitle}</h1>
+        <h2 {...storyblokEditable(blok)} dangerouslySetInnerHTML={{ __html: render(blok.page_subtitle) }} 
+            className="roboto-flex-font is-size-5-mobile is-size-4-tablet mb-3"/>
     )
 };
 
