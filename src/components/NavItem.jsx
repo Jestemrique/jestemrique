@@ -1,4 +1,3 @@
-// NavItem.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { storyblokEditable } from "@storyblok/react";
@@ -11,7 +10,6 @@ const NavItem = ({ blok }) => {
     catch (e) {}
   };
 
-  // has-text-right-tablet -> alinea a la derecha en tablet+ (puedes usar -desktop si prefieres solo desktop)
   return (
     <li {...storyblokEditable(blok)} className="has-text-right-tablet">
       <Link to={url === "/" ? "/" : `/${url}`} onClick={handleClick} >

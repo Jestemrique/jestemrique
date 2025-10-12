@@ -4,7 +4,6 @@ import ListAlbums from "./ListAlbums";
 import { useLocation } from "react-router-dom";
 
 const Band = ({ blok }) => {
-    console.log("band blok: ", blok);
     const { state } = useLocation();
     const bandUuid = state?.uuid ?? blok?.uuid; 
 
@@ -21,10 +20,7 @@ const Band = ({ blok }) => {
             </div>
 
             <LastFmBand band={blok.name} />
-            <h1>
-            {blok.name}</h1>
             <ListAlbums bandUuid={bandUuid} />
-            {/* <ListAlbums bandUuid={blok.uuid} /> */}
         </>
     )
 };
