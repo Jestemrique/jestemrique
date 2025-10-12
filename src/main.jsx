@@ -27,7 +27,8 @@ import LastFmBand from './components/LastFmBand.jsx';
 
 
 storyblokInit({
-  accessToken: import.meta.env.VITE_STORYBLOK_PREVIEW_API_TOKEN,
+  accessToken: import.meta.env.VITE_STORYBLOK_ACCESS_TOKEN,
+  // accessToken: import.meta.env.VITE_STORYBLOK_PREVIEW_API_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page,
