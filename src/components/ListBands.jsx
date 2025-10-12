@@ -27,7 +27,7 @@ const ListBands = () => {
     <ul>
       {bands.map((band) => (
         <li key={band.uuid }>
-          <Link to={`/${band.full_slug}`}  className="epr-link is-size-5">
+          <Link to={`/${band.full_slug}`} state={{ uuid: band.uuid }} className="epr-link is-size-5">
             {band.content?.title || band.name || "Banda sin título"}
           </Link>
         </li>
