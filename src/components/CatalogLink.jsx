@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { storyblokEditable } from "@storyblok/react";
 
 const CatalogLink = ({ blok }) => {
-    //   const url = blok.link?.cached_url || "/";
     const url = blok.target?.cached_url || "/";
 
     const handleClick = () => {
